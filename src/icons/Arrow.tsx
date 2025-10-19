@@ -1,13 +1,27 @@
-import { IconProps } from "../utils/types";
+    import React from 'react';
+    import type { IconProps } from '../utils/types'; // Убедитесь, что путь правильный
 
+    const Arrow: React.FC<IconProps> = ({ size = 24, className = '' }) => {
+      const svgSize = `${size}px`;
 
-const Arrow: React.FC<IconProps> = ({ size = 24, className = "" }) => {
+      return (
+        <svg
+          className={className}
+          height={svgSize}
+          width={svgSize}
+          viewBox="0 0 24 24" // Это стандартный viewBox
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Это путь для стрелки вправо. Вы можете заменить на ваш, если он у вас есть */}
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      );
+    };
 
-    const svgSize = `${size}px`;
-
-    return (
-        <svg className={className} height={svgSize} width={svgSize} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="currentColor" fillRule="evenodd" d="M5.29289,3.70711 C4.90237,3.31658 4.90237,2.68342 5.29289,2.29289 C5.68342,1.90237 6.31658,1.90237 6.70711,2.29289 L11.7071,7.29289 C12.0976,7.68342 12.0976,8.31658 11.7071,8.70711 L6.70711,13.7071 C6.31658,14.0976 5.68342,14.0976 5.29289,13.7071 C4.90237,13.3166 4.90237,12.6834 5.29289,12.2929 L9.58579,8 L5.29289,3.70711 Z"></path> </g></svg>
-    );
-};
-
-export default Arrow;
+    export default Arrow;
+    

@@ -3,8 +3,7 @@
     interface ReferralModalProps {
       isOpen: boolean;
       onClose: () => void;
-      points: number; // points оставлен, так как используется для отображения
-      // setPoints: React.Dispatch<React.SetStateAction<number>>; // Эта строка УДАЛЕНА из интерфейса
+    
       
       invitedFriendsCount?: number;
       totalReferralBonus?: number;
@@ -15,7 +14,7 @@
       isOpen, 
       onClose, 
     
-      // setPoints, // setPoints УДАЛЕН из списка пропсов
+     
       invitedFriendsCount = 0, 
       totalReferralBonus = 0,
       referralLink = 'https://t.me/herorace_bot?start=VSF5' 
